@@ -1,0 +1,113 @@
+# Configure Rolls
+rollFormula = "2d6"
+# statToggle = "Highlight"
+[rollResults]
+[rollResults.critical]
+range = "12+"
+label = "¡Crítico!"
+[rollResults.success]
+range = "10-12"
+label = "¡Éxito!"
+[rollResults.partial]
+range = "7-9"
+label = "Éxito parcial"
+[rollResults.failure]
+range = "6-"
+label = "Fallo…"
+########################################
+## EXPERTAS##########################
+########################################
+# Define the character group.
+[character]
+# Define stats.
+[character.stats]
+vitalidad = "Vitalidad"
+compostura = "Compostura"
+razon = "Razón"
+presencia = "Presencia"
+sensibilidad = "Sensibilidad"
+# Define attributes.
+[character.attributesTop]
+[character.attributesTop.reina]
+type = "ListMany"
+label = "La Corona de la Reina"
+description = "Cuando te pongas esta Corona, marca la opción que quieras."
+options = [
+  "Narra tu recuerdo más preciado con tu pareja fallecida.",
+  "Narra una escena que te muestre como una hermana o hija imperfecta.",
+  "Narra una escena que te muestre como una madre imperfecta.",
+  "Narra tu recuerdo más preciado con tus hijos.",
+  "Narra una escena del presente que muestre un aspecto privado tuyo que pocas personas conocen.",
+  "Narra una escena del presente que muestre un romance floreciente.",
+  "Narra una escena del presente que muestre cómo satisfaces tus deseos físicos.",
+]
+
+[character.attributesTop.vacio]
+type = "ListMany"
+label = "La Corona del Vacío"
+description = "Cuando te pontas esta corona, marca la primera casilla vacía."
+options = [
+  "Una sombra en el jardín. A partir de ahora, durante los Retazos de una vida agradable o las escenas con movimientos Afables centrados en ti, también tienees que narrar cómo se revelan, de manera sutil, oscuras entidades.",
+  "El carruaje. Tu modificador de Razón se reduce en 1 y tu modificador de Sensibilidad aumenta en 1.",
+  "La pálida máscara. De ahora en adelante, durante una conversación íntima con otro personaje, debes hacer una referencia casual a la muerte, el envejecimiento, el más allá o El Fin De Todas Las Cosas, sin importar de qué se esté hablando",
+  "Pepitas de granada. Obtienes la condición Obsesionada con el Vacío. No puede eliminarse.",
+  "El Vacío. Retira a tu personaje de una forma que muestre cuán perdida está en el Vacío.",
+]
+[character.attributesTop.finde]
+type = "ListMany"
+label = "Fin de sesión"
+description = "La primera pregunta siempre está marcada. Al comenzar la sesión, marca dos más (para tener un total de tres)."
+options = [
+  "¿Han resuelto las Expertas algún misterio?",
+  "¿Has menoscabado en secreto la autoridad de un oficial local?",
+  "¿Has compartido tu sabiduría con una persona joven?",
+  "¿Has compartido un recuerdo de un miembro de la familia fallecido?",
+  "¿Te has comportado como una mujer con la mitad de tu edad?",
+  "¿Te has vuelto loquita por alguien?",
+  "¿Le has demostrado a alguien que «quien tuvo retuvo»?",
+]
+# Define sidebar details.
+[character.attributesLeft]
+[character.attributesLeft.estilo]
+type = "LongText"
+label = "Estilo"
+description = "Escoge uno o inventa el tuyo propio."
+[character.attributesLeft.quehacer]
+type = "LongText"
+label = "Quehacer"
+description = "Escoge uno o inventa el tuyo propio. No puede haber más de una Experta con el mismo."
+[character.attributesLeft.condis]
+type = "LongText"
+label = "Condiciones"
+description = "Descríbelas. Hasta tres (si has de añadir una cuarta, marca una corona en su lugar)."
+[character.attributesLeft.hogar]
+type = "LongText"
+label = "Hogar, dulce hogar"
+description = "Un listado de tus objetos. Marca uno para obtener ventaja."
+[character.attributesLeft.xp]
+type = "Xp"
+label = "PE"
+max = 5
+[character.attributesLeft.avances]
+type = "ListMany"
+label = "Avances"
+options = [
+  "Incrementa en 1 el modificador de una habilidad (máx. +3).",
+  "Incrementa en 1 el modificador de una habilidad (máx. +3).",
+  "Escoge un movimiento Experto más.",
+  "Escoge un movimiento Experto más.",
+  "Desmarca todos los objetos de tu Hogar, dulce hogar.",
+]
+# Define groups for moves.
+[character.moveTypes]
+basic = "Movimientos básicos"
+expert = "Movimientos expertos"
+# Define groups for equipment.
+########################################
+## NPCS ################################
+########################################
+# Define stats.
+[npc]
+  # Define logical groups for moves.
+  [npc.moveTypes]
+    mc = "Reacciones"
