@@ -1,0 +1,372 @@
+# Configure Rolls
+rollFormula = "2d6"
+
+# Define roll result ranges.
+[rollResults]
+    [rollResults.failure]
+        range = "6-"
+        label = "Complications..."
+    [rollResults.partial]
+        range = "7-9"
+        label = "Partial success"
+    [rollResults.success]
+        range = "10+"
+        label = "Success!"
+
+########################################
+## CHARACTERS ##########################
+########################################
+# Define the character group.
+[character]
+
+    # Define stats.
+    [character.stats]
+        physical = "Physical"
+        mental = "Mental"
+        charm = "Charm"
+
+    # Define attributes.
+
+    # Define sidebar details.
+    [character.attributesLeft]
+        [character.attributesLeft.effects]
+            type = "Text"
+            label = "Negitive Effects"
+
+    # Define groups for moves.
+    [character.moveTypes]
+        basic = "Basic Moves"
+        special = "Special Moves"
+
+    # Define groups for equipment.
+    [character.equipmentTypes]
+        gear = "Gear"
+
+########################################
+## Custom Actor Types ##################
+########################################
+# Define the character group.
+[barbarian]
+
+    # Define stats.
+    [barbarian.stats]
+        insatiable = "Insatiable"
+        mighty = "Mighty"
+        smart = "Smart"
+
+    # Define attributes.
+
+    # Define sidebar details.
+    [barbarian.attributesLeft]
+        [barbarian.attributesLeft.effects]
+            type = "Text"
+            label = "Negative Effects"
+
+        [barbarian.attributesLeft.role]
+            type = "Text"
+            label = "Role"
+            description = "What is your role on the station?"
+
+    # Define groups for moves.
+    [barbarian.moveTypes]
+        basic = "Basic Moves"
+        special = "Special Moves"
+
+    # Define groups for equipment.
+    [barbarian.equipmentTypes]
+        gear = "Gear"
+
+[earthling]
+
+    # Define stats.
+    [earthling.stats]
+        heroism = "Heroism"
+        knowledge = "Knowledge"
+        steel = "Steel"
+
+    # Define attributes.
+
+    # Define sidebar details.
+    [earthling.attributesLeft]
+        [earthling.attributesLeft.effects]
+            type = "Text"
+            label = "Negative Effects"
+
+    # Define groups for moves.
+    [earthling.moveTypes]
+        basic = "Basic Moves"
+        special = "Special Moves"
+
+    # Define groups for equipment.
+    [earthling.equipmentTypes]
+        gear = "Gear"
+
+[engine]
+
+    # Define stats.
+    [engine.stats]
+        destruction = "Destruction"
+        engines = "Engines"
+        science = "Science"
+
+    # Define attributes.
+
+    # Define sidebar details.
+    [engine.attributesLeft]
+        [engine.attributesLeft.effects]
+            type = "LongText"
+            label = "Negative Effects"
+
+#        [engine.attributesLeft.functions]
+#            type = "LongText"
+#            label = "Functions"
+#            description = "Choose up to three functions to have built into your body:"
+
+
+        [engine.attributesLeft.functions]
+        		type = "ListMany"
+            label = "Functions"
+            description = "Choose up to three functions to have built into your body:"
+            options = [
+                "Close combat weapons (acid spray, chainsaw, claws, spikes, tasers, etc).",
+                "Detachable head.",
+                "Direct interface jack (for connecting to other machines).",
+                "Drug injectors (and various drugs).",
+                "Extensible limbs.",
+                "Force field.",
+                "Gadget factory (produces any small household item).",
+                "Home entertainment system.",
+                "Hotel room.",
+                "Projectile weapon of your choice (flame thrower, lasers, stun wave projector, etc)."
+              ]
+            
+    # Define groups for moves.
+    [engine.moveTypes]
+        basic = "Basic Moves"
+        special = "Special Moves"
+
+    # Define groups for equipment.
+    [engine.equipmentTypes]
+        gear = "Gear"
+
+[mutant]
+
+    # Define stats.
+    [mutant.stats]
+        human = "Human"
+        inhuman = "Inhuman"
+        monster = "Monster"
+
+    # Define attributes.
+
+    # Define sidebar details.
+    [mutant.attributesLeft]
+        [mutant.attributesLeft.effects]
+            type = "LongText"
+            label = "Negative Effects"
+
+        [mutant.attributesLeft.mutations]
+            type = "LongText"
+            label = "Mutations"
+            description = "Choose up to three mutations for your character — stuff like acid spit, chameleon skin, a huge mouth, hypnotic eyes, psychic powers, sonar, tentacles, webs, or wings, for example. Each one should make you look strange and inhuman, even if only slightly."
+
+    # Define groups for moves.
+    [mutant.moveTypes]
+        basic = "Basic Moves"
+        special = "Special Moves"
+
+    # Define groups for equipment.
+    [mutant.equipmentTypes]
+        gear = "Gear"
+
+[princess]
+
+    # Define stats.
+    [princess.stats]
+        brave = "Brave"
+        popular = "Popular"
+        smart = "Smart"
+
+    # Define attributes.
+
+    # Define sidebar details.
+    [princess.attributesLeft]
+        [princess.attributesLeft.effects]
+            type = "LongText"
+            label = "Negative Effects"
+
+        [princess.attributesLeft.cityname]
+            type = "Text"
+            label = "Your People"
+            description = "By default, your people occupy one great city and the surrounding lands. Give that city a name."
+
+        [princess.attributesLeft.peoplestrengths]
+            type = "LongText"
+            label = "Their Strengths"
+            description = "Choose their three strengths: artistic, brave, clean, cultured, disciplined, diverse, fashionable, friendly, industrious, learned, loyal, mercantile, resourceful, scientifi c, skilled, strong, wealthy, well-armed, or more numerous than the default."
+
+        [princess.attributesLeft.peopleweaknesses]
+            type = "LongText"
+            label = "Their Weaknesses"
+            description = "Choose their two weaknesses: belligerent, decadent, diseased, emotionally stunted, haunted, ignorant, impoverished, insular, isolated, judgmental, lazy, rebellious, superstitious, surrounded by enemies, unruly, or rather fewer in number than the default."
+
+    # Define groups for moves.
+    [princess.moveTypes]
+        basic = "Basic Moves"
+        special = "Special Moves"
+
+    # Define groups for equipment.
+    [princess.equipmentTypes]
+        gear = "Gear"
+
+[ranger]
+
+    # Define stats.
+    [ranger.stats]
+        popular = "Popular"
+        smart = "Smart"
+        tough = "Tough"
+
+    # Define attributes.
+
+    # Define sidebar details.
+    [ranger.attributesLeft]
+        [ranger.attributesLeft.effects]
+            type = "LongText"
+            label = "Negative Effects"
+
+    # Define groups for moves.
+    [ranger.moveTypes]
+        basic = "Basic Moves"
+        special = "Special Moves"
+
+    # Define groups for equipment.
+    [ranger.equipmentTypes]
+        gear = "Gear"
+
+[wizard]
+
+    # Define stats.
+    [wizard.stats]
+        nomagic = "No Magic"
+        starmagic = "Star Magic"
+        voidmagic = "Void Magic"
+
+    # Define attributes.
+
+    # Define sidebar details.
+    [wizard.attributesLeft]
+        [wizard.attributesLeft.effects]
+            type = "LongText"
+            label = "Negative Effects"
+
+        [wizard.attributesLeft.magic]
+            type = "LongText"
+            label = "Magic"
+            description = "Choose three concepts or elements that your magic is based around. Each time you use magic, it must include at least one of these, or it doesn’t work."
+
+        [wizard.attributesLeft.archmage]
+            type = "LongText"
+            label = "Arch-Mage"
+            description = "Choose three more magical concepts or elements."
+
+    # Define groups for moves.
+    [wizard.moveTypes]
+        basic = "Basic Moves"
+        special = "Special Moves"
+
+    # Define groups for equipment.
+    [wizard.equipmentTypes]
+        gear = "Gear"
+
+[technician]
+
+    # Define stats.
+    [technician.stats]
+        heroism = "Heroism"
+        madness = "Madness"
+        science = "Science"
+
+    # Define attributes.
+
+    # Define sidebar details.
+    [technician.attributesLeft]
+        [technician.attributesLeft.effects]
+            type = "LongText"
+            label = "Negative Effects"
+
+        [technician.attributesLeft.machines]
+            type = "LongText"
+            label = "Machines"
+            description = "You have three machines in your possession. Say what they are and what they do. Each machine does one special thing."
+
+        [technician.attributesLeft.wealthmachines]
+            type = "LongText"
+            label = "A Wealth of Machines"
+            description = "You have three more machines, in addition to the three you start with."
+
+    # Define groups for moves.
+    [technician.moveTypes]
+        basic = "Basic Moves"
+        special = "Special Moves"
+
+    # Define groups for equipment.
+    [technician.equipmentTypes]
+        gear = "Gear"
+
+[thief]
+
+    # Define stats.
+    [thief.stats]
+        charming = "Charming"
+        deft = "Deft"
+        lucky = "Lucky"
+
+    # Define attributes.
+
+    # Define sidebar details.
+    [thief.attributesLeft]
+        [thief.attributesLeft.effects]
+            type = "LongText"
+            label = "Negative Effects"
+        [thief.attributesLeft.time]
+        	type = "Number"
+          default = 0
+          label = "Stolen Time"
+
+    # Define groups for moves.
+    [thief.moveTypes]
+        basic = "Basic Moves"
+        special = "Special Moves"
+
+    # Define groups for equipment.
+    [thief.equipmentTypes]
+        gear = "Gear"
+
+
+########################################
+## NPCS ################################
+########################################
+# Define stats.
+[npc]
+
+    # Define attributes.
+
+    [npc.attributesLeft]
+        [npc.attributesLeft.look]
+            type = "LongText"
+            label = "Look"
+        [npc.attributesLeft.behaviours]
+            type = "LongText"
+            label = "Behaviours"
+        [npc.attributesLeft.drive]
+            type = "LongText"
+            label = "Drive"
+
+    # Define logical groups for moves.
+    [npc.moveTypes]
+        gm = "GM Moves"
+
+    # Define groups for equipment.
+    [npc.equipmentTypes]
+        gear = "Gear"

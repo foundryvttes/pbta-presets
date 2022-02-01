@@ -1,0 +1,773 @@
+#### TSL configuration ####
+
+# Configure rolls
+
+rollFormula = "2d6"
+
+# Roll result ranges
+[rollResults]
+	[rollResults.failure]
+		range = "6-"
+		label = "Downbeat"
+	[rollResults.partial]
+		range = "7-9"
+		label = "Mixed Beat"
+	[rollResults.success]
+		range = "10+"
+		label = "Upbeat!"
+###################################################
+### Generic Character Sheet for custom classes ####
+###################################################
+
+# Define character group
+[character]
+
+	# Define stats
+	[character.stats]
+	daring = "Daring"
+	grace = "Grace"
+	heart = "Heart"
+	wit = "Wit"
+	spirit = "Spirit"
+	
+	# Define conditions
+	[character.attributesTop.conditions]
+		type = "ListMany"
+		label = "Conditions"
+		description = "Choose all that apply"
+		options = [
+		"Angry -2 to Figure Out A Person",
+		"Frightened -2 to Fight",
+		"Guilty -2 to Emotional Support",
+		"Hopeless -2 to Defy Disaster",
+		"Insecure -2 to Entice",
+    ]
+   
+  # Define pronouns 
+	[character.attributesTop.pronouns]
+	type = "Text"
+	label = "Pronouns"
+	
+	# Define XP
+	[character.attributesTop.xp]
+		type = "Xp"
+		label = "Xp"
+		max = 5
+		
+	
+	
+	# Define Aesthetics for left sidebar 
+	[character.attributesLeft.aesthetic]
+		type = "LongText"
+		label = "Aesthetic"
+		
+    # Define playbook advances
+	[character.attributesLeft.advances]
+	type = "ListMany"
+	label = "Advances"
+	description = "First five must be chosen from the first six options"
+		options = [
+		"Take another move from your playbook",
+		"Take another move from your playbook",
+		"Take a move from any playbook",
+		"Take a move from any playbook",
+		"Add 1 to a stat (max stat of 3)",
+		"Add 1 to a stat (max stat of 3)",
+		"Switch to a new playbook",
+		"Live happily ever after",
+		]
+   
+   # Define Strings
+   # NOTE: Disabling for now to clean up sheet
+  # [character.attributesLeft.strings]
+	#	   type = "Clock"
+	#	   label = "String"
+	#	   max = 4
+	#	   default = 0
+	
+	# Define Groups for Moves
+	
+	[character.moveTypes]
+	#basic = "Basic Moves"
+  danger = "Danger Moves"
+  heartstring = "Heartstring Moves"
+  recovery = "Recovery Moves"
+  truths = "Truths of Heart and Blade"
+  	special = "Special Playbook Moves"
+	playbook = "Playbook Moves"
+	
+
+#############
+#### NPC ####
+#############
+
+[npc]
+	[npc.moveTypes]
+  	basic = "Basic"
+	
+		# Define conditions
+	[npc.attributesTop.conditions]
+		type = "ListMany"
+		label = "Conditions"
+		description = "Choose all that apply"
+		options = [
+		"Angry",
+		"Frightened",
+		"Guilty",
+		"Hopeless",
+		"Insecure",
+    ]
+#######################
+### The Beast Class ###
+#######################
+[beast]
+	baseType = 'character'
+	# Define stats
+	[beast.stats]
+	daring = "Daring"
+	grace = "Grace"
+	heart = "Heart"
+	wit = "Wit"
+	spirit = "Spirit"
+	
+		# Define conditions
+	[beast.attributesTop.conditions]
+		type = "ListMany"
+		label = "Conditions"
+		description = "Choose all that apply"
+		options = [
+		"Angry -2 to Figure Out A Person",
+		"Frightened -2 to Fight",
+		"Guilty -2 to Emotional Support",
+		"Hopeless -2 to Defy Disaster",
+		"Insecure -2 to Entice",
+    ]
+	
+	# Define Pronouns
+  	[beast.attributesTop.pronouns]
+	type = "Text"
+	label = "Pronouns"
+	
+
+	
+	
+	# Define Feral Clock
+	[beast.attributesTop.feralClock]
+		type = "Clock"
+		label = "Feral"
+		max = 5
+		default = 1
+		
+		# Define XP
+	[beast.attributesTop.xp]
+		type = "Xp"
+		label = "Xp"
+		max = 5
+	
+	# Define Feral Form
+	[beast.attributesTop.feralForm]
+		type = "LongText"
+		label = "Transformed Form"
+	
+	
+	# Define Aesthetics for left sidebar 
+	[beast.attributesLeft.aesthetic]
+		type = "LongText"
+		label = "Aesthetic"
+		
+    # Define playbook advances
+	[beast.attributesLeft.advances]
+	type = "ListMany"
+	label = "Advances"
+	description = "First five must be chosen from the first six options"
+		options = [
+		"Take another move from your playbook",
+		"Take another move from your playbook",
+		"Take a move from any playbook",
+		"Take a move from any playbook",
+		"Add 1 to a stat (max stat of 3)",
+		"Add 1 to a stat (max stat of 3)",
+		"Switch to a new playbook",
+		"Live happily ever after",
+		]
+	
+	# Define Groups for Moves
+	
+	[beast.moveTypes]
+  danger = "Danger Moves"
+  heartstring = "Heartstring Moves"
+  recovery = "Recovery Moves"
+  truths = "Truths of Heart and Blade"
+	#playbook = "Feral"
+  special = "Feral"
+  playbook = "Playbook Moves"
+  
+  #########################
+  ### The Devoted Class ###
+  #########################
+  [devoted]
+	baseType = 'character'
+	# Define stats
+		[devoted.stats]
+			daring = "Daring"
+			grace = "Grace"
+			heart = "Heart"
+			wit = "Wit"
+			spirit = "Spirit"
+			
+			
+	# Define conditions
+	[devoted.attributesTop.conditions]
+		type = "ListMany"
+		label = "Conditions"
+		description = "Choose all that apply"
+		options = [
+		"Angry -2 to Figure Out A Person",
+		"Frightened -2 to Fight",
+		"Guilty -2 to Emotional Support",
+		"Hopeless -2 to Defy Disaster",
+		"Insecure -2 to Entice",
+    ]
+	
+	#Define Pronouns Field
+  	[devoted.attributesTop.pronouns]
+			type = "Text"
+			label = "Pronouns"
+
+	
+	# Define XP
+	[devoted.attributesTop.xp]
+		type = "Xp"
+		label = "Xp"
+		max = 5
+	
+	# Define Aesthetics for left sidebar 
+	[devoted.attributesLeft.aesthetic]
+		type = "LongText"
+		label = "Aesthetic"
+		
+    # Define playbook advances
+	[devoted.attributesLeft.advances]
+	type = "ListMany"
+	label = "Advances"
+	description = "First five must be chosen from the first six options"
+		options = [
+		"Take another move from your playbook",
+		"Take another move from your playbook",
+		"Take a move from any playbook",
+		"Take a move from any playbook",
+		"Add 1 to a stat (max stat of 3)",
+		"Add 1 to a stat (max stat of 3)",
+		"Switch to a new playbook",
+		"Live happily ever after",
+		]
+    
+    	[devoted.moveTypes]
+  		danger = "Danger Moves"
+ 	 		heartstring = "Heartstring Moves"
+		  recovery = "Recovery Moves"
+  		truths = "Truths of Heart and Blade"
+			special = "Devoted"
+		  playbook = "Playbook Moves"
+      
+ #########################     
+ ### The Chosen Class ###
+ #########################
+   [chosen]
+	baseType = 'character'
+	# Define stats
+	[chosen.stats]
+	daring = "Daring"
+	grace = "Grace"
+	heart = "Heart"
+	wit = "Wit"
+	spirit = "Spirit"
+  
+  [chosen.moveTypes]
+  danger = "Danger Moves"
+  heartstring = "Heartstring Moves"
+  recovery = "Recovery Moves"
+  truths = "Truths of Heart and Blade"
+	special = "Destiny"
+	playbook = "Playbook Moves"
+	
+	  # Define conditions
+	[chosen.attributesTop.conditions]
+		type = "ListMany"
+		label = "Conditions"
+		description = "Choose all that apply"
+		options = [
+		"Angry -2 to Figure Out A Person",
+		"Frightened -2 to Fight",
+		"Guilty -2 to Emotional Support",
+		"Hopeless -2 to Defy Disaster",
+		"Insecure -2 to Entice",
+    ]
+  
+	#Define Pronouns field 
+  	[chosen.attributesTop.pronouns]
+	type = "Text"
+	label = "Pronouns"
+	
+	# Define XP
+	[chosen.attributesTop.xp]
+		type = "Xp"
+		label = "Xp"
+		max = 5
+	
+	#Define Devotion
+	
+	# Define Aesthetics for left sidebar 
+	[chosen.attributesLeft.aesthetic]
+		type = "LongText"
+		label = "Aesthetic"
+		
+    # Define playbook advances
+	[chosen.attributesLeft.advances]
+	type = "ListMany"
+	label = "Advances"
+	description = "First five must be chosen from the first six options"
+		options = [
+		"Take another move from your playbook",
+		"Take another move from your playbook",
+		"Take a move from any playbook",
+		"Take a move from any playbook",
+		"Add 1 to a stat (max stat of 3)",
+		"Add 1 to a stat (max stat of 3)",
+		"Switch to a new playbook",
+		"Live happily ever after",
+		]
+    
+ ##########################
+ ### The Infamous Class ###
+ ##########################
+ 
+    [infamous]
+	baseType = 'character'
+	# Define stats
+	[infamous.stats]
+	daring = "Daring"
+	grace = "Grace"
+	heart = "Heart"
+	wit = "Wit"
+	spirit = "Spirit"
+  
+  [infamous.moveTypes]
+  danger = "Danger Moves"
+  heartstring = "Heartstring Moves"
+  recovery = "Recovery Moves"
+  truths = "Truths of Heart and Blade"
+	special = "What Cannot Be Undone"
+	playbook = "Playbook Moves"
+  
+	# Define conditions
+	[infamous.attributesTop.conditions]
+		type = "ListMany"
+		label = "Conditions"
+		description = "Choose all that apply"
+		options = [
+		"Angry -2 to Figure Out A Person",
+		"Frightened -2 to Fight",
+		"Guilty -2 to Emotional Support",
+		"Hopeless -2 to Defy Disaster",
+		"Insecure -2 to Entice",
+    ]
+	
+	# Define pronouns
+  	[infamous.attributesTop.pronouns]
+	type = "Text"
+	label = "Pronouns"
+	
+	# Define XP
+	[infamous.attributesTop.xp]
+		type = "Xp"
+		label = "Xp"
+		max = 5
+
+	
+	# Define Aesthetics for left sidebar 
+	[infamous.attributesLeft.aesthetic]
+		type = "LongText"
+		label = "Aesthetic"
+		
+    # Define playbook advances
+	[infamous.attributesLeft.advances]
+	type = "ListMany"
+	label = "Advances"
+	description = "First five must be infamous from the first six options"
+		options = [
+		"Take another move from your playbook",
+		"Take another move from your playbook",
+		"Take a move from any playbook",
+		"Take a move from any playbook",
+		"Add 1 to a stat (max stat of 3)",
+		"Add 1 to a stat (max stat of 3)",
+		"Switch to a new playbook",
+		"Live happily ever after",
+		]
+    
+    
+ ##############################
+ ### The Nature Witch Class ###
+ ##############################
+ 
+   [nature_witch]
+	baseType = 'character'
+	# Define stats
+	[nature_witch.stats]
+	daring = "Daring"
+	grace = "Grace"
+	heart = "Heart"
+	wit = "Wit"
+	spirit = "Spirit"
+  
+  [nature_witch.moveTypes]
+  danger = "Danger Moves"
+  heartstring = "Heartstring Moves"
+  recovery = "Recovery Moves"
+  truths = "Truths of Heart and Blade"
+	special = "Curiosity"
+	playbook = "Playbook Moves"
+  
+  	[nature_witch.attributesTop.pronouns]
+	type = "Text"
+	label = "Pronouns"
+  
+	
+	# Define conditions
+	[nature_witch.attributesTop.conditions]
+		type = "ListMany"
+		label = "Conditions"
+		description = "Choose all that apply"
+		options = [
+		"Angry -2 to Figure Out A Person",
+		"Frightened -2 to Fight",
+		"Guilty -2 to Emotional Support",
+		"Hopeless -2 to Defy Disaster",
+		"Insecure -2 to Entice",
+    ]
+	
+	# Define XP
+	[nature_witch.attributesTop.xp]
+		type = "Xp"
+		label = "Xp"
+		max = 5
+
+	
+	# Define Aesthetics for left sidebar 
+	[nature_witch.attributesLeft.aesthetic]
+		type = "LongText"
+		label = "Aesthetic"
+		
+    # Define playbook advances
+	[nature_witch.attributesLeft.advances]
+	type = "ListMany"
+	label = "Advances"
+	description = "First five must be chosen from the first six options"
+		options = [
+		"Take another move from your playbook",
+		"Take another move from your playbook",
+		"Take a move from any playbook",
+		"Take a move from any playbook",
+		"Add 1 to a stat (max stat of 3)",
+		"Add 1 to a stat (max stat of 3)",
+		"Switch to a new playbook",
+		"Live happily ever after",
+		]
+    
+	  [scoundrel]
+	baseType = 'character'
+	# Define stats
+	[scoundrel.stats]
+	daring = "Daring"
+	grace = "Grace"
+	heart = "Heart"
+	wit = "Wit"
+	spirit = "Spirit"
+  
+  [scoundrel.moveTypes]
+  danger = "Danger Moves"
+  heartstring = "Heartstring Moves"
+  recovery = "Recovery Moves"
+  truths = "Truths of Heart and Blade"
+	special = "Living in the Moment"
+	playbook = "Playbook Moves"
+  
+	
+	# Define conditions
+	[scoundrel.attributesTop.conditions]
+		type = "ListMany"
+		label = "Conditions"
+		description = "Choose all that apply"
+		options = [
+		"Angry -2 to Figure Out A Person",
+		"Frightened -2 to Fight",
+		"Guilty -2 to Emotional Support",
+		"Hopeless -2 to Defy Disaster",
+		"Insecure -2 to Entice",
+    ]
+	
+	# Define pronouns
+  	[scoundrel.attributesTop.pronouns]
+	type = "Text"
+	label = "Pronouns"
+	
+	# Define XP
+	[scoundrel.attributesTop.xp]
+		type = "Xp"
+		label = "Xp"
+		max = 5
+	
+	# Define Aesthetics for left sidebar 
+	[scoundrel.attributesLeft.aesthetic]
+		type = "LongText"
+		label = "Aesthetic"
+
+		
+    # Define playbook advances
+	[scoundrel.attributesLeft.advances]
+	type = "ListMany"
+	label = "Advances"
+	description = "First five must be scoundrel from the first six options"
+		options = [
+		"Take another move from your playbook",
+		"Take another move from your playbook",
+		"Take a move from any playbook",
+		"Take a move from any playbook",
+		"Add 1 to a stat (max stat of 3)",
+		"Add 1 to a stat (max stat of 3)",
+		"Switch to a new playbook",
+		"Live happily ever after",
+		]
+  
+  ########################
+  ### The Seeker Class ###
+  ########################
+  
+   ########################
+  ### The Seeker Class ###
+  ########################
+  
+  [seeker]
+	baseType = 'character'
+	# Define stats
+	[seeker.stats]
+	daring = "Daring"
+	grace = "Grace"
+	heart = "Heart"
+	wit = "Wit"
+	spirit = "Spirit"
+  
+  [seeker.moveTypes]
+  danger = "Danger Moves"
+  heartstring = "Heartstring Moves"
+  recovery = "Recovery Moves"
+  truths = "Truths of Heart and Blade"
+	special = "Tradition"
+	playbook = "Playbook Moves"
+	
+	# Define conditions
+	[seeker.attributesTop.conditions]
+		type = "ListMany"
+		label = "Conditions"
+		description = "Choose all that apply"
+		options = [
+		"Angry -2 to Figure Out A Person",
+		"Frightened -2 to Fight",
+		"Guilty -2 to Emotional Support",
+		"Hopeless -2 to Defy Disaster",
+		"Insecure -2 to Entice",
+    ]
+	
+	# Define pronouns
+  	[seeker.attributesTop.pronouns]
+	type = "Text"
+	label = "Pronouns"
+	
+	# Define tradition clock
+		[seeker.attributesTop.traditionClock]
+		type = "Clock"
+		label = "Tradition"
+		max = 5
+		default = 1
+	
+	
+	# Define XP
+	[seeker.attributesTop.xp]
+		type = "Xp"
+		label = "Xp"
+		max = 5
+
+	
+	# Define Aesthetics for left sidebar 
+	[seeker.attributesLeft.aesthetic]
+		type = "LongText"
+		label = "Aesthetic"
+		
+    # Define playbook advances
+	[seeker.attributesLeft.advances]
+	type = "ListMany"
+	label = "Advances"
+	description = "First five must be seeker from the first six options"
+		options = [
+		"Take another move from your playbook",
+		"Take another move from your playbook",
+		"Take a move from any playbook",
+		"Take a move from any playbook",
+		"Add 1 to a stat (max stat of 3)",
+		"Add 1 to a stat (max stat of 3)",
+		"Switch to a new playbook",
+		"Live happily ever after",
+		]
+    
+  ##############################
+  ### The Spooky Witch Class ###
+  ##############################
+  
+   ##############################
+  ### The Spooky Witch Class ###
+  ##############################
+  
+  [spooky_witch]
+	baseType = 'character'
+	# Define stats
+	[spooky_witch.stats]
+	daring = "Daring"
+	grace = "Grace"
+	heart = "Heart"
+	wit = "Wit"
+	spirit = "Spirit"
+  
+  [spooky_witch.moveTypes]
+  danger = "Danger Moves"
+  heartstring = "Heartstring Moves"
+  recovery = "Recovery Moves"
+  truths = "Truths of Heart and Blade"
+	special = "The Unseen"
+	playbook = "Playbook Moves"
+  
+	
+	# Define conditions
+	[spooky_witch.attributesTop.conditions]
+		type = "ListMany"
+		label = "Conditions"
+		description = "Choose all that apply"
+		options = [
+		"Angry -2 to Figure Out A Person",
+		"Frightened -2 to Fight",
+		"Guilty -2 to Emotional Support",
+		"Hopeless -2 to Defy Disaster",
+		"Insecure -2 to Entice",
+    ]
+	
+	# Define pronouns field
+	[spooky_witch.attributesTop.pronouns]
+	type = "Text"
+	label = "Pronouns"
+	
+	
+	# Define XP
+	[spooky_witch.attributesTop.xp]
+		type = "Xp"
+		label = "Xp"
+		max = 5
+
+	
+	# Define Aesthetics for left sidebar 
+	[spooky_witch.attributesLeft.aesthetic]
+		type = "LongText"
+		label = "Aesthetic"
+		
+    # Define playbook advances
+	[spooky_witch.attributesLeft.advances]
+	type = "ListMany"
+	label = "Advances"
+	description = "First five must be spooky_witch from the first six options"
+		options = [
+		"Take another move from your playbook",
+		"Take another move from your playbook",
+		"Take a move from any playbook",
+		"Take a move from any playbook",
+		"Add 1 to a stat (max stat of 3)",
+		"Add 1 to a stat (max stat of 3)",
+		"Switch to a new playbook",
+		"Live happily ever after",
+		]
+    
+  ###########################
+  ### The Trickster Class ###
+  ###########################
+  
+    ##############################
+  ### The Trickster Class ###
+  ##############################
+  
+  [trickster]
+	baseType = 'character'
+	# Define stats
+	[trickster.stats]
+	daring = "Daring"
+	grace = "Grace"
+	heart = "Heart"
+	wit = "Wit"
+	spirit = "Spirit"
+  
+  [trickster.moveTypes]
+  danger = "Danger Moves"
+  heartstring = "Heartstring Moves"
+  recovery = "Recovery Moves"
+  truths = "Truths of Heart and Blade"
+	special = "Feelings"
+	playbook = "Playbook Moves"
+  
+	
+	# Define conditions
+	[trickster.attributesTop.conditions]
+		type = "ListMany"
+		label = "Conditions"
+		description = "Choose all that apply"
+		options = [
+		"Angry -2 to Figure Out A Person",
+		"Frightened -2 to Fight",
+		"Guilty -2 to Emotional Support",
+		"Hopeless -2 to Defy Disaster",
+		"Insecure -2 to Entice",
+    ]
+	# Define pronouns
+	[trickster.attributesTop.pronouns]
+	type = "Text"
+	label = "Pronouns"
+
+		# Define Feelings Clock	
+	[trickster.attributesTop.feelingsClock]
+		type = "Clock"
+		label = "Feelings"
+		max = 5
+		default = 1
+	
+	# Define XP
+	[trickster.attributesTop.xp]
+		type = "Xp"
+		label = "Xp"
+		max = 5
+	
+	# Define Aesthetics for left sidebar 
+	[trickster.attributesLeft.aesthetic]
+		type = "LongText"
+		label = "Aesthetic"
+		
+    # Define playbook advances
+	[trickster.attributesLeft.advances]
+	type = "ListMany"
+	label = "Advances"
+	description = "First five must be trickster from the first six options"
+		options = [
+		"Take another move from your playbook",
+		"Take another move from your playbook",
+		"Take a move from any playbook",
+		"Take a move from any playbook",
+		"Add 1 to a stat (max stat of 3)",
+		"Add 1 to a stat (max stat of 3)",
+		"Switch to a new playbook",
+		"Live happily ever after",
+		]

@@ -1,0 +1,120 @@
+#### World of Dungeons TOML ####
+#### DM zsilverfox#5261 with any issues ####
+
+# Configure Rolls
+rollFormula = "2d6"
+
+# Roll result ranges
+[rollResults]
+	[rollResults.failure]
+		range = "6-"
+		label = "Miss!"
+	[rollResults.partial]
+		range = "7-9"
+		label = "Partial Success"
+	[rollResults.success]
+		range = "10-11"
+		label = "Success!"
+	[rollResults.critical]
+		range = "12+"
+		label = "Critical Success!"
+
+#### Character Sheet ####
+
+# Define character group
+[character]
+	# Define Stats
+	[character.stats]
+	str = "STR"
+	dex = "DEX"
+	con = "CON"
+	int = "INT"
+	wis = "WIS"
+	cha = "CHA"
+#### Top Attributes ####
+# Define Level
+	[character.attributesTop.level]
+	type = "Number"
+	label = "Level"
+# Define Armor
+	[character.attributesTop.armor]
+	type = "Number"
+	label = "Armor"
+# Define hit dice
+	[character.attributesTop.hd]
+	type = "Number"
+	label = "HD"
+# Define hit points
+	[character.attributesTop.hp]
+	type = "Resource"
+	label = "HP"
+
+#### Left Attributes ####
+# Define XP
+	[character.attributesLeft.xp]
+	type = "Number"
+	label = "XP"
+# Define Coins
+	[character.attributesLeft.coin]
+	type = "Number"
+	label = "Coin"
+	
+# Define XP for next Level
+	[character.attributesLeft.nextLevel]
+	type = "Number"
+	label = "XP for Next Level"
+
+#### Moves ####
+[character.moveTypes]
+	risky = "Attempt Something Risky"
+	skill = "Skills"
+	specialAbilities = "Special Abilities"
+	
+#### Equipment ####
+
+[character.equipmentTypes]
+	weapon = "Weapons"
+	armor = "Armor"
+	other = "Other"
+	
+#######################
+#### NPCs #############
+#######################
+
+# As WoD doesn't necessarily have NPCs, this is a placeholder
+# to satisfy the PbtA TOML requirements
+
+[npc.attributesTop]
+  [npc.attributesTop.armor]
+    type = "Number"
+    label = "Armor"
+  [npc.attributesTop.harm]
+    type = "Clock"
+    max = 6
+    default = 0
+  [npc.attributesTop.damage]
+    type = "Roll"
+    label = "Damage"
+    default = "1d10"
+[npc.attributesLeft]
+  [npc.attributesLeft.look]
+    type = "LongText"
+    label = "Look"
+  [npc.attributesLeft.weight]
+    type = "Resource"
+    label = "Weight"
+  [npc.attributesLeft.conditions]
+    type = "ListMany"
+    label = "Conditions"
+    description = "Choose all that apply:"
+    options = [
+      "Afraid",
+      "Angry",
+      "Guilty",
+      "Hopeless",
+      "Insecure"
+    ]
+	
+[npc.moveTypes]
+	basic = "Basic"
+	advanced = "Advanced"

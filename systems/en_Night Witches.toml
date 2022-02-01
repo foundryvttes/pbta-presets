@@ -1,0 +1,119 @@
+#### Night Witches TOML Configuration for
+#### Foundry's Powered by the Apocalypse system
+
+#### This configuration uses text from
+#### Night Witches © Copyright 2015 Bully Pulpit Games, LLC.
+#### For more information, see 
+#### bullypulpitgames.com/games/night-witches
+#### This configuration is distributed with explicit permission 
+#### granted by Bully Pulpit Games
+
+# configure rolls
+rollFormula = "2d6"
+
+# Roll result ranges
+[rollResults]
+	[rollResults.failure]
+		range = "6-"
+		label = "Complications..."
+	[rollResults.partial]
+		range = "7-9"
+		label = "Partial Success"
+	[rollResults.success]
+		range = "10+"
+		label = "Success!"
+		
+### Generic character sheet
+
+# Define character group
+[character]
+	# Define stats
+	[character.stats]
+	skill = "Skill"
+	guts = "Guts"
+	luck = "Luck"
+	medals = "Medals"
+	
+	# Define Roles
+	[character.attributesLeft.roles]
+		type = "ListMany"
+		label = "Roles"
+		description = "Choose one, change when directed to by Mark or optionally when changing duty stations"
+		options = [
+		"Adventurer: On duty station change, Advance if you walked away from a wrecked aircraft",
+		"Dreamer: On duty station change, Advance if you shared a premonition and it came true",
+		"Leader: On duty station change, Advance if someone under your direct command died",
+		"Misanthrope: On duty station change, Advance if you bucked against the patriarchy and got in trouble for it",
+		"Protector: On duty station change, Advance if you saved someone's life.",
+		"Zealot: On duty station change, Advance if you pointed the NKVD to another airwoman."
+		]
+	# Define Groups for Moves
+	[character.moveTypes]
+	day = "Day Moves"
+	night = "Night Moves"
+	special = "Special Moves"
+	playbook = "Playbook Moves"
+	
+	# Define Harm Clock
+	[character.attributesTop.harm]
+	type = "Clock"
+	label = "Harm"
+	max = 4
+	default = 0
+	
+	# Define Medals
+	[character.attributesLeft.medals]
+	type = "ListMany"
+	label = "Medals"
+	description = "Choose those you have earned and add the total to +Medals"
+	options = ["Medal of Valor",
+				"Order of the Patriotic War",
+				"Order of the Red Star",
+				"Hero of the Soviet Union"]
+	# Define Regimental Honors
+	[character.attributesLeft.honors]
+	type = "ListMany"
+	label = "Regimental Honors"
+	description = "Don't count for +Medals, but count for pride"
+	options = [ "Medal for the Defense of the Caucasus",
+				"46th Taman Guard's Banner",
+				"Medal for the Liberation of Warsaw",
+				"Medal for the Capture of Berlin",
+				"Great Patriotic War Victory Medal"]
+        # Define Marks
+	[character.attributesLeft.marks]
+	type = "ListMany"
+	label = "Marks"
+	description = "Choose a Mark when directed by a Move or the GM."
+	options = [ "Suffer the death of a friend or lover",
+		"Witness the death of a comrade", 
+		"Share a premonition",
+    "Call dangerous attention to yourself",
+		"Speak truth to power",
+		"Spread a vicious rumor",
+		"Reveal a secret",
+		"Act against your best interests",
+		"Advance and grow",
+		"Tell a war story",
+		"Tell a story of home",
+		"Embrace death and face your final destiny" ]
+	
+	
+#############
+#### NPC ####
+#############
+#### The following is placeholder text to satisfy the PbtA system
+#### This is not intended for use
+[npc]
+	[npc.moveTypes]
+  	basic = "Basic"
+	
+		# Define conditions
+	[npc.attributesTop.conditions]
+		type = "ListMany"
+		label = "Conditions"
+		description = "Choose all that apply"
+		options = [
+		"Angry",
+		"Sad"
+    ]
