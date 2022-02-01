@@ -4,3 +4,4 @@ Dentro de la carpeta systems podrU+00e1s encontrar todos aquellos juegos que se 
 
 ## Sistemas añadidos
 - Monster of the Week (Autor: Luvero)
+- Brindlewood Bay (Autor: Luis Gimeno)
