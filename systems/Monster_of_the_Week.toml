@@ -1,0 +1,123 @@
+# Configure Rolls
+rollFormula = "2d6"
+# Define roll result ranges.
+[rollResults]
+  [rollResults.success]
+    range = "10+"
+    label = "¡Éxito!"
+  [rollResults.partial]
+    range = "7-9"
+    label = "Éxito parcial"
+  [rollResults.failure]
+    range = "6-"
+    label = "Fallaste..."
+########################################
+## CHARACTERS ##########################
+########################################
+# Define the character group.
+[character]
+  # Define stats.
+  [character.stats]
+    cool = "Frialdad"
+    tough = "Dureza"
+    charm = "Encanto"
+    sharp = "Agudeza"
+    weird = "Sobrenatural"
+  # Define attributes.
+  [character.attributesTop]
+    [character.attributesTop.harm]
+      type = "Clock"
+      label = "Daño"
+      description = "Cuando marques 4 o más, marca Inestable."
+      max = 7
+    [character.attributesTop.unstable]
+        type = "Checkbox"
+        label = "Inestable"
+        checkboxLabel = "Heridas inestables"
+        description = "Las heridas inestables empeorarán según pase el tiempo."
+        default = false
+    [character.attributesTop.luck]
+      type = "Clock"
+      label = "Suerte"
+      description = "Marca Suerte para cambiar una tirada a 12 o anular todo el daño."
+      max = 7
+      default = 0
+    [character.attributesTop.xp]
+      type = "Xp"
+      label = "Experiencia"
+      description = "Cuando falles una tirada, o cuando un movimiento lo diga, marca uno."
+      max = 5
+      default = 0
+  # Define sidebar details.
+  [character.attributesLeft]
+    [character.attributesLeft.armour]
+        type = "Number"
+        label = "Armadura"
+        default = 0
+        description = "Armadura reduce el daño sufrido tanto como el valor de Armadura."
+    [character.attributesLeft.luckspecial]
+        type = "LongText"
+        label = "Suerte especial"
+    [character.attributesLeft.look]
+        type = "LongText"
+        label = "Aspecto"
+    [character.attributesLeft.improvements]
+        type = "LongText"
+        label = "Mejoras"
+    [character.attributesLeft.advancedimprovements]
+        type = "LongText"
+        label = "Mejoras avanzadas"
+    
+  # Define groups for moves.
+  [character.moveTypes]
+    basic = "Movimientos básicos"
+    class = "Movimientos de libreto"
+  # Define groups for equipment.
+  [character.equipmentTypes]
+    gear = "Objetos"
+    weapon = "Armas"
+    transport = "Transporte"
+    armour = "Armadura"
+########################################
+## NPCS ################################
+########################################
+# Define stats.
+[npc]
+  # Define attributes.
+  [npc.attributesTop]
+    [npc.attributesTop.harm]
+        type = "Resource"
+        label = "Capacidad de daño"
+    [npc.attributesTop.armour]
+        type = "Number"
+        label = "Armadura"
+        default = 0
+    [npc.attributesTop.type]
+        type = "ListMany"
+        label = "Tipo de PNJ"
+        options = [
+            "Monstruo",
+            "Secuaz",
+            "Espectador",
+            "Localización"
+        ]
+      
+  [npc.attributesLeft]
+    [npc.attributesLeft.powers]
+      type = "LongText"
+      label = "Poderes"
+    [npc.attributesLeft.attacks]
+      type = "LongText"
+      label = "Ataques"
+    [npc.attributesLeft.weakness]
+      type = "LongText"
+      label = "Debilidades"
+    [npc.attributesLeft.desc]
+      type = "LongText"
+      label = "Descripción"
+    [npc.attributesLeft.motivation]
+      type = "LongText"
+      label = "Motivación"
+  # Define logical groups for moves.
+  [npc.moveTypes]
+    custom = "Movimientos"
